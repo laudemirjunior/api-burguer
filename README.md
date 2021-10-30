@@ -58,8 +58,9 @@ DELETE /cart - FORMATO DA REQUISIÇÃO
 
 {
 "userId": ${id}
-
 }
+
+Para fazer exclusões é necessário estar logado e ter o recurso para fazer esta alteração.
 
 # json-server-base
 
