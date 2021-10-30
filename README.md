@@ -26,36 +26,41 @@ Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usu
 
 Documentação.
 
-POST /shirt - FORMATO DA REQUISIÇÃO
+POST /products - FORMATO DA REQUISIÇÃO
 
 {
-"title": "Nike",
-"price": "100",
-"userId" ${id}
+"title": "Hamburguer",
+"type": "Sanduíches",
+"price": 14,
+"image": "https://i.ibb.co/DfdVC0F/202109090436-skn5yx754p-1.png",
+"id": 1
 }
 
-O usuário deve estar logado e possuir o recuso gravar.
+Qualquer usuario pode ter acesso aos dados.
 
-Para criação de uma nova "shirt", é necessário passar o "title", "price" e o "userID" que seria o id do usuario como parametro.
-
-GET /shirt - FORMATO DA REQUISIÇÃO
-
-O usuário deve estar logado para ler o recurso.
-
-POST /shoes - FORMATO DA REQUISIÇÃO
+GET /cart - FORMATO DA REQUISIÇÃO
+POST /cart - FORMATO DA REQUISIÇÃO
 
 {
-"title": "Nike",
-"price": "100",
-"userId" ${id}
+"title": "Hamburguer",
+"type": "Sanduíches",
+"price": 14,
+"image": "https://i.ibb.co/DfdVC0F/202109090436-skn5yx754p-1.png",
+"id": 1,
+"quantity", 1,
+"total": 0,
+"userId": ${id}
 }
 
-O usuário deve estar logado e possuir o recuso gravar.
+O usuário deve estar logado para acessar esses dados e possuir o recuso gravar para fazer alterações.
 
-Para criação de uma nova "shoes", é necessário passar o "title", "price" e o "userID" que seria o id do usuario como parametro.
+DELETE /cart - FORMATO DA REQUISIÇÃO
 
-GET /shoes - FORMATO DA REQUISIÇÃO
+{
+"userId": ${id}
 
-Todos podem ler o recurso.
+}
+
 # json-server-base
+
 # json-server-hamburgueria
